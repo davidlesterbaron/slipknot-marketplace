@@ -514,6 +514,11 @@ textarea {
   /* Gradient direction and overlaying the black color on top of the image for better readability */
   background: linear-gradient(-45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
     url('../assets/background-1440.jpg');
+  
+  /* parallax */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   /* Add loading color for the div */
   background-color: var(--matterColor);
@@ -525,8 +530,8 @@ textarea {
   background-position: center center;
 
   @media (--viewportLarge) {
-    border-radius: 40px;
-    border: solid 36px var(--matterColorBright);
+    /* border-radius: 40px;
+    border: solid 36px var(--matterColorBright); */
   }
 }
 
@@ -535,6 +540,11 @@ textarea {
   @media (--viewportMedium) {
     background: linear-gradient(-45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
       url('../assets/background-1440.jpg');
+
+    /* parallax */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     /* Add loading color for the div */
     background-color: var(--matterColor);

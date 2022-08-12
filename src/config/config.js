@@ -28,11 +28,11 @@ const i18n = {
 
 // Main search used in Topbar.
 // This can be either 'keywords' or 'location'.
-const mainSearchType = 'keywords';
+const mainSearchType = 'location';
 
 // There are 2 SearchPage variants that can be used:
 // 'map' & 'list'
-const searchPageVariant = 'list';
+const searchPageVariant = 'map';
 
 // ListingPage has 2 layout options: 'hero-image' and 'full-image'.
 // - 'hero-image' means a layout where there's a hero section with cropped image in the beginning of the page
@@ -45,7 +45,7 @@ const listingPageLayout = 'full-image';
 //         Without the 'origin' parameter, search will not work correctly
 // NOTE 3: Keyword search and ordering search results by distance can't be used at the same time. You can turn keyword
 //         search off by removing keyword filter config from filters array in marketplace-custom-config.js
-const sortSearchByDistance = false;
+const sortSearchByDistance = true;
 
 // API supports custom processes to be used in booking process.
 // We need to specify it when we are initiating a new order

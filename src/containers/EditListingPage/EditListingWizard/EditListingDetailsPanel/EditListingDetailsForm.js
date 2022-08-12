@@ -105,37 +105,53 @@ const EditListingDetailsFormComponent = props => (
         })
       );
 
-      const sizeConfig = findConfigForSelectFilter('size', filterConfig);
-      const sizeSchemaType = sizeConfig ? sizeConfig.schemaType : null;
-      const sizes = sizeConfig && sizeConfig.options ? sizeConfig.options : [];
-      const sizeLabel = intl.formatMessage({
-        id: 'EditListingDetailsForm.sizeLabel',
+      const whiskeynameConfig = findConfigForSelectFilter('whiskeyname', filterConfig);
+      const whiskeynameSchemaType = whiskeynameConfig.schemaType;
+      const whiskeynames = whiskeynameConfig.options ? whiskeynameConfig.options : [];
+      const whiskeynameLabel = intl.formatMessage({
+        id: 'EditListingDetailsForm.whiskeynameLabel',
       });
-      const sizePlaceholder = intl.formatMessage({
-        id: 'EditListingDetailsForm.sizePlaceholder',
+      const whiskeynamePlaceholder = intl.formatMessage({
+        id: 'EditListingDetailsForm.whiskeynamePlaceholder',
       });
 
-      const sizeRequired = required(
+      const whiskeynameRequired = required(
         intl.formatMessage({
-          id: 'EditListingDetailsForm.sizeRequired',
+          id: 'EditListingDetailsForm.whiskeynameRequired',
         })
       );
 
-      const brandConfig = findConfigForSelectFilter('brand', filterConfig);
-      const brandSchemaType = brandConfig ? brandConfig.schemaType : null;
-      const brands = brandConfig && brandConfig.options ? brandConfig.options : [];
-      const brandLabel = intl.formatMessage({
-        id: 'EditListingDetailsForm.brandLabel',
-      });
-      const brandPlaceholder = intl.formatMessage({
-        id: 'EditListingDetailsForm.brandPlaceholder',
-      });
+      // const sizeConfig = findConfigForSelectFilter('size', filterConfig);
+      // const sizeSchemaType = sizeConfig ? sizeConfig.schemaType : null;
+      // const sizes = sizeConfig && sizeConfig.options ? sizeConfig.options : [];
+      // const sizeLabel = intl.formatMessage({
+      //   id: 'EditListingDetailsForm.sizeLabel',
+      // });
+      // const sizePlaceholder = intl.formatMessage({
+      //   id: 'EditListingDetailsForm.sizePlaceholder',
+      // });
 
-      const brandRequired = required(
-        intl.formatMessage({
-          id: 'EditListingDetailsForm.brandRequired',
-        })
-      );
+      // const sizeRequired = required(
+      //   intl.formatMessage({
+      //     id: 'EditListingDetailsForm.sizeRequired',
+      //   })
+      // );
+
+      // const brandConfig = findConfigForSelectFilter('brand', filterConfig);
+      // const brandSchemaType = brandConfig ? brandConfig.schemaType : null;
+      // const brands = brandConfig && brandConfig.options ? brandConfig.options : [];
+      // const brandLabel = intl.formatMessage({
+      //   id: 'EditListingDetailsForm.brandLabel',
+      // });
+      // const brandPlaceholder = intl.formatMessage({
+      //   id: 'EditListingDetailsForm.brandPlaceholder',
+      // });
+
+      // const brandRequired = required(
+      //   intl.formatMessage({
+      //     id: 'EditListingDetailsForm.brandRequired',
+      //   })
+      // );
 
       return (
         <Form className={classes} onSubmit={handleSubmit}>
@@ -171,25 +187,14 @@ const EditListingDetailsFormComponent = props => (
             validate={categoryRequired}
             schemaType={categorySchemaType}
           />
-
           <CustomFieldEnum
-            id="size"
-            name="size"
-            options={sizes}
-            label={sizeLabel}
-            placeholder={sizePlaceholder}
-            validate={sizeRequired}
-            schemaType={sizeSchemaType}
-          />
-
-          <CustomFieldEnum
-            id="brand"
-            name="brand"
-            options={brands}
-            label={brandLabel}
-            placeholder={brandPlaceholder}
-            validate={brandRequired}
-            schemaType={brandSchemaType}
+            id="whiskeyname"
+            name="whiskeyname"
+            options={whiskeynames}
+            label={whiskeynameLabel}
+            placeholder={whiskeynamePlaceholder}
+            validate={whiskeynameRequired}
+            schemaType={whiskeynameSchemaType}
           />
 
           <Button
